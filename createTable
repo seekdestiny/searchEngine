@@ -1,0 +1,22 @@
+use searchAds;
+
+CREATE TABLE `ad` (
+`adId` int(11) NOT NULL,
+`campaignId` int(11) DEFAULT NULL,
+`keyWords` varchar(1024) DEFAULT NULL,
+`bidPrice` double DEFAULT NULL,
+`price` double DEFAULT NULL,
+`thumbnail` mediumtext,
+`description` mediumtext,
+`brand` varchar(100) DEFAULT NULL,
+`detail_url` mediumtext,
+`category` varchar(1024) DEFAULT NULL,
+`title` varchar(2048) DEFAULT NULL,
+PRIMARY KEY (`adId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `campaign` (
+`campaignId` int(11) NOT NULL,
+`budget` double DEFAULT NULL,
+PRIMARY KEY (`campaignId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
